@@ -1,0 +1,239 @@
+<html class="gr__localhost"><head><title>LogIn</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link rel="stylesheet" href="css/login.css">
+      
+  <style>
+  h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+  body {font-family: "Open Sans"}
+      
+      
+  .select-boxes{text-align: center;}
+  select {
+      background-color: #F5F5F5;
+      border: 1px double #15a6c7;
+      color: #7d919c;
+      font-family: Georgia;
+      font-weight: bold;
+      font-size: 14px;
+      height: 39px;
+      padding: 7px 8px;
+      width: 250px;
+      outline: none;
+      margin: 10px 0 10px 0;
+  }
+  select option{
+      font-family: Georgia;
+      font-size: 14px;
+  }
+      
+      
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      
+   /* Basic reset */
+     /* Better text styling */
+      font: bold 14px Arial, sans-serif;
+  }
+   
+ 
+   
+  </style>
+      
+      
+        
+      
+  </head><body class="w3-light-grey" data-gr-c-s-loaded="true">
+    <br>
+    <br>
+   
+  <!-- Navigation bar with social media icons -->
+  <div class="w3-bar w3-black w3-hide-small">
+    <a href="https://www.facebook.com" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
+    <a href="https://twitter.com/" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.youtube.com/" class="w3-bar-item w3-button"><i class="fa fa-youtube"></i></a>
+    <a href="https://plus.google.com/" class="w3-bar-item w3-button"><i class="fa fa-google"></i></a>
+    <a href="https://www.linkedin.com/" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+  </div>
+    
+  <!-- w3-content defines a container for fixed size centered content, 
+  and is wrapped around the whole page content, except for the footer in this example -->
+  <div class="w3-content" style="max-width:1600px">
+   
+    
+   
+    <!-- Grid -->
+    <div class="w3-row w3-padding w3-border">
+   
+      <!-- Blog entries -->
+      <div class="w3-col l12 s12">
+      
+        <!-- Blog entry -->
+        <div class="w3-container w3-white w3-margin w3-padding-large">
+          
+            <h2 style="text-align: center" ;=""> </h2>
+            <br>
+            <div class="select-boxes">
+      
+    <div class="container">
+  <div class="col-lg-9">
+              <br>
+    
+   
+   
+  <br>
+   
+   
+    <form class="form-horizontal" action=" " method="post"  id="reg_form">
+      <fieldset>
+        </fieldset>
+             <legend> Account information </legend>
+             <br>
+          <fieldset>
+            <br>
+          <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label">E-Mail</label>
+          <div class="col-md-6  inputGroupContainer">
+            <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+              <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+            </div>
+          </div>
+        </div>
+        
+      
+          <div class="form-group has-feedback">
+              <label for="password"  class="col-md-4 control-label">
+                      Password
+                  </label>
+                  <div class="col-md-6  inputGroupContainer">
+                  <div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+              <input class="form-control" id="userPw" type="password" placeholder="password" 
+                         name="password" data-minLength="5"
+                         data-error="some error"
+                         required/>
+                  <span class="glyphicon form-control-feedback"></span>
+                  <span class="help-block with-errors"></span>
+                  </div>
+               </div>
+          </div>
+          <div class="login-misc">
+            <h5>Need an Account? <a href="signup.html">Sign Up</a></h5>
+          </div>
+          <br><br>
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+          <div class="col-md-1">
+              <button type="submit" class="btn btn-primary" ><a href="index.html">back</a> <span class="glyphicon glyphicon-back"></span></button>
+          </div>
+          <div class="col-md-7.8">
+            <button type="submit" class="btn btn-warning" ><a href="district.html">LogIn</a> <span class="glyphicon glyphicon-send"></span></button>
+            
+          </div>
+        </div>
+      </fieldset>
+      
+    </form>
+  </div>
+   
+  </div>
+   
+  <!-- PrefixFree -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+   
+          <script src="js/index.js"></script>
+  <script type="text/javascript">
+   
+     $(document).ready(function() {
+      $('#reg_form').bootstrapValidator({
+          // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+          feedbackIcons: {
+              valid: 'glyphicon glyphicon-ok',
+              invalid: 'glyphicon glyphicon-remove',
+              validating: 'glyphicon glyphicon-refresh'
+          },
+          fields: {
+              	
+       email: {
+                  validators: {
+                      notEmpty: {
+                          message: 'Please supply your email address'
+                      },
+                      emailAddress: {
+                          message: 'Please supply a valid email address'
+                      }
+                  }
+              },
+                      
+          password: {
+                  validators: {
+                       stringLength: {
+                          min: 8,
+                      },
+                      notEmpty: {
+                          message: 'Please supply your correct password'
+                      }
+                  }
+              },
+           
+              
+              }
+          })
+          
+       
+          .on('success.form.bv', function(e) {
+              $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                  $('#reg_form').data('bootstrapValidator').resetForm();
+   
+              // Prevent form submission
+              e.preventDefault();
+   
+              // Get the form instance
+              var $form = $(e.target);
+   
+              // Get the BootstrapValidator instance
+              var bv = $form.data('bootstrapValidator');
+   
+              // Use Ajax to submit form data
+              $.post($form.attr('action'), $form.serialize(), function(result) {
+                  console.log(result);
+              }, 'json');
+          });
+  });
+   
+   
+   
+   </script>
+      
+      </div>
+   
+            
+              
+        </div>
+        
+      </div>
+   
+    </div>
+   
+  </div>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> 
+
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+   
+  </body>
+  </html>
+
+
+  
+
+    
+
+   
